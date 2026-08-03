@@ -1,6 +1,6 @@
 # VYTAL AIR
 
-Official public development website and 16:9 social-media asset library for **VYTAL AIR**, a proposed VYTAL House capsule-based dry-powder inhalation development platform.
+Official public development website and 16:9 social-media asset system for **VYTAL AIR**, a proposed VYTAL House capsule-based dry-powder inhalation development platform.
 
 ## Status
 
@@ -16,22 +16,22 @@ Official public development website and 16:9 social-media asset library for **VY
 - Positioning line: **Renew • Restore • Recharge**
 - Operating principle: **Rights • Disclosure • Proof**
 
-## Repository structure
+## Website stack
 
 ```text
 .
 ├── index.html
 ├── styles.css
 ├── script.js
-├── assets/
-│   ├── brand/
-│   ├── people/
-│   ├── product/
-│   └── social/
+├── assets.js
+├── GOOGLE_SITES.md
+├── .nojekyll
 └── .github/workflows/pages.yml
 ```
 
-## Local preview
+The production repository uses a static HTML/CSS/JavaScript stack with no build dependency.
+
+## Open locally
 
 ```bash
 python3 -m http.server 8080
@@ -41,7 +41,21 @@ Open `http://localhost:8080`.
 
 ## GitHub Pages
 
-The included workflow deploys the static site through GitHub Pages. In repository settings, select **Pages → Build and deployment → GitHub Actions** if Pages is not already enabled.
+The included workflow deploys the static website through GitHub Pages. In repository settings, select:
+
+**Pages → Build and deployment → GitHub Actions**
+
+Expected URL after successful deployment:
+
+`https://acoolnerd.github.io/VYTALAir/`
+
+## Google Sites
+
+Google Sites does not import a complete custom HTML/CSS/JavaScript website as a native theme. Use the GitHub Pages site as the interactive source, then embed it in Google Sites using:
+
+**Insert → Embed → By URL**
+
+See `GOOGLE_SITES.md` for the complete integration approach.
 
 ## Controlled communication rule
 
